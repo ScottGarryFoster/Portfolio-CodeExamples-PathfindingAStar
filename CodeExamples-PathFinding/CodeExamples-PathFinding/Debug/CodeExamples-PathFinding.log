@@ -1,3 +1,10 @@
 ﻿  CodeExamples-PathFinding.cpp
-D:\GameDevelopment\PortfolioCodeExamples\CodeExamples-PathFinding\CodeExamples-PathFinding\CodeExamples-PathFinding.cpp(62,23): warning C4018: '<': signed/unsigned mismatch
-  CodeExamples-PathFinding.vcxproj -> D:\GameDevelopment\PortfolioCodeExamples\CodeExamples-PathFinding\Debug\CodeExamples-PathFinding.exe
+  GridStorage.cpp
+D:\GameDevelopment\PortfolioCodeExamples\Portfolio-CodeExamples-PathfindingAStarNew\CodeExamples-PathFinding\CodeExamples-PathFinding\CodeExamples-PathFinding.cpp(62,23): warning C4018: '<': signed/unsigned mismatch
+  PathfindingAStar.cpp
+  PathfindingCosts.cpp
+  Vector2Int.cpp
+  Generating Code...
+D:\GameDevelopment\PortfolioCodeExamples\Portfolio-CodeExamples-PathfindingAStarNew\CodeExamples-PathFinding\CodeExamples-PathFinding\GridStorage.cpp(58,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  LINK : D:\GameDevelopment\PortfolioCodeExamples\Portfolio-CodeExamples-PathfindingAStarNew\CodeExamples-PathFinding\Debug\CodeExamples-PathFinding.exe not found or not built by the last incremental link; performing full link
+  CodeExamples-PathFinding.vcxproj -> D:\GameDevelopment\PortfolioCodeExamples\Portfolio-CodeExamples-PathfindingAStarNew\CodeExamples-PathFinding\Debug\CodeExamples-PathFinding.exe
