@@ -26,7 +26,7 @@ int main()
 				pathingAStar = new PathfindingAStar(false);
 				pathBetweenPoints.empty();
 				cout << "Path between: (" << playerLocation.x << ", " << playerLocation.y << ") and (" << pathfindingLocation.x << ", " << pathfindingLocation.y << ")" << endl;
-				pathBetweenPoints = pathingAStar->FindPathBetweenTwoPoints(pathfindingLocation, playerLocation, grid->GetGrid(), grid->GetGridWidth(), grid->GetGridHeight());
+				pathBetweenPoints = pathingAStar->FindPathBetweenTwoPoints(pathfindingLocation.flip(), playerLocation.flip(), grid->GetGrid(), grid->GetGridWidth(), grid->GetGridHeight());
 				cout << "pathBetweenPoints: " << pathBetweenPoints.size() << endl;
 			}
 

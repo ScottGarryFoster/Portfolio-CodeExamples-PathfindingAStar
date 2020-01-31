@@ -53,14 +53,6 @@ list<Vector2Int> PathfindingAStar::FindPathBetweenTwoPoints(Vector2Int origin, V
 		return returnList;
 	}
 
-	int store = origin.y;
-	origin.y = origin.x;
-	origin.x = store;
-
-	store = target.y;
-	target.y = target.x;
-	target.x = store;
-
 	m_openList.empty();
 	m_closedList.empty();
 	PathfindingCosts currentPoint;
@@ -80,7 +72,7 @@ list<Vector2Int> PathfindingAStar::FindPathBetweenTwoPoints(Vector2Int origin, V
 		RemoveFromOpenList(currentPoint.self);//No longer look for a path in the current position
 		AddToClosedList(currentPoint.self);//Already have the shortest route to this node
 
-		int LowestGCostFound = 999999999, LowestHCostFound = 999999999;
+		int LowestFCostFound = 999999999, LowestHCostFound = 999999999;
 		PathfindingCosts foundLowest;
 		foundLowest.self = Vector2Int(-1, -1);
 		if (m_openList.size() <= 0)
@@ -93,9 +85,9 @@ list<Vector2Int> PathfindingAStar::FindPathBetweenTwoPoints(Vector2Int origin, V
 		for (it = m_openList.begin(); it != m_openList.end(); ++it)
 		{	//Find the next lowest cost to search
 			if (it->explored) continue;
-			if (LowestGCostFound > it->g || (LowestGCostFound == it->g && LowestHCostFound > it->h))
+			if (LowestFCostFound > it->f || (LowestFCostFound == it->f && LowestHCostFound > it->h))
 			{
-				LowestGCostFound = it->g;
+				LowestFCostFound = it->f;
 				LowestHCostFound = it->h;
 				foundLowest.LoadFromIterator(it);
 			}
